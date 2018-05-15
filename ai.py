@@ -145,5 +145,11 @@ class Network(nn.Module):
 #implement deep Q learning
 #Dqn stands for deep q network
 class Dqn():
-    
-    def __init__(self, ):
+    #arguments, our object self, then since we're creating an object of the netork class, the network class takes
+    # the arguments in the init function of input_size and nb_action
+    # the last argument wich is the gamma param, in the deep q modal, it is delay coeffcient, that's a parameter of
+    # the equation
+    def __init__(self, input_size, nb_action, gamma):
+        # will need an object of our network, then we will need our memory, then we need variables for the last state
+        # last action and the last reward. We will also need an optimizer to perform stochastic gradient descent
+        # to update the weights according to how much they will contribute to the error when the ai is making a mistake
